@@ -1,0 +1,37 @@
+.skills {
+    padding-top: 120px;
+    background-color: #18191a;
+    &__wrapper {
+        padding: 60px 10px 0 10px;
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        column-gap: 13px;
+        grid-template-rows: minmax(270px, auto) minmax(270px, auto);
+        row-gap: 13px;
+        grid-auto-rows: minmax(270px, auto);
+    }
+    &__item {
+        border: 1px solid #fff;
+        &-icon {
+            padding-top: 30px;
+            padding-left: 30px;
+            img {
+                max-width: 200px;
+                max-height: 50px;
+            }
+        }
+        &-title {
+            color: #fff;
+            padding-top: 20px;
+            padding-left: 30px;
+        }
+        &-text {
+            color: #fff;
+            padding: 15px 30px 0 30px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
