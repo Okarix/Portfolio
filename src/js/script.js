@@ -8,16 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay = document.querySelector('.menu__overlay'),
         link = document.querySelectorAll('.menu__link'),
         up = document.querySelector('.pageup');
-        // form = document.querySelector('#form');
+    // form = document.querySelector('#form');
 
 
     hamburger.addEventListener('click', () => {
         menu.classList.add('active');
-    });    
+    });
 
     closeElem.addEventListener('click', () => {
         menu.classList.remove('active');
-    });    
+    });
 
     overlay.addEventListener('click', () => {
         menu.classList.remove('active');
@@ -41,13 +41,28 @@ document.addEventListener('DOMContentLoaded', () => {
         btnVisibility();
     });
 
+    //!
+    const sendButton = document.querySelector('.send-button');
+
+    const sendMail = async () => {
+        let response = await fetch('/send'),
+            result = await response.json();
+    }
+
+    sendButton.onclick = (e) => {
+        e.preventDefault();
+        sendMail();
+
+    }
+    //!
+
     // form.addEventListener('submit', formSend);
 
     // async function formSend(e) {
     //     e.preventDefault();
 
     //     let formData = new FormData(form);
-        
+
     //     let response = await fetch('sendmail.php', {
     //         method: 'POST',
     //         body: formData
